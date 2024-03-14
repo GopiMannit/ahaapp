@@ -1,0 +1,355 @@
+.full {
+  white-space: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.top {
+  margin-right: 10%;
+  justify-content: center;
+  margin-top: 14px;
+  display:flex;
+}
+
+.filter-search label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+
+}
+
+.errorMessage {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.filter-search {
+  left: 0;
+
+}
+
+.filter {
+  padding: 8px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: 3px solid #ccc;
+  left: 0;
+}
+
+.search-icon {
+  cursor: pointer;
+  margin-right: 35px;
+  font-size: 20px;
+}
+
+.date {
+  padding: 8px;
+  border-radius: 8px;
+  border: 3px solid #ccc;
+  margin-left: 10px;
+}
+
+.label-date {
+  margin-right: 30px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 9px;
+}
+
+.custom-input {
+  margin-left: 15px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 3px solid #ccc;
+  margin-top: 10px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  overflow-x: auto;
+
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  word-spacing: 2px;
+  box-shadow: 0 0 10px #8bd600;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  width: 130px;
+}
+
+.table th {
+  background-color: #8bd600;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.pagination li {
+  margin-right: 5px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.pagination .active a {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination a:hover {
+  background-color: #f2f2f2;
+  color: blue;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .table-container {    
+    display: block;
+    justify-content: center;
+    margin-top: 20px;
+    overflow-x: scroll;
+  }
+
+  .table-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  .table-cell {
+    width: 100%;
+    padding: 8px;
+    border-right: 1px solid #ddd;
+  }
+
+  .table-cell:last-child {
+    border-right: none;
+    /* Remove border for the last cell */
+  }
+
+  .table-cell:before {
+    content: attr(data-title);
+    font-weight: bold;
+    padding-right: 10px;
+    /* Adjust spacing */
+  }
+
+  .table tbody{
+    flex-direction: column;
+  }
+
+  .table td:before,
+  .table th:before {
+    content: attr(data-title);
+    font-weight:300;
+  }
+
+  .top {
+    display:flex;
+    flex-direction:column;
+  }
+
+  .filter-search label {
+    margin-left: 43px;
+    font-weight: bold;
+  }
+  .custom-input {
+    margin-left: 109px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    margin-top: 10px;
+  }
+
+  .label-date {
+    margin-right: -10px;
+    font-weight: bold;
+    margin-left: 21px;
+    margin-top:21px;
+  }
+
+  .search-icon {
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 20px;
+  }
+
+  .date {
+    padding: 8px;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    margin-left: 2px;
+  }
+
+  .filter {
+    padding: 8px;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    left: 0;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  /* Add these styles to your existing code */
+
+.table-container {
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+  overflow-x: scroll;
+  /* WebKit scrollbar styles */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f2f2f2;
+}
+
+/* Define the style for the scrollbar thumb and track */
+.table-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background-color: #f2f2f2;
+}
+
+  .table th,
+  .table td {
+    padding: 5px;
+  }
+
+  .filter {
+    padding: 8px;
+    margin-left: 32px;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    left: 0;
+  }
+
+  .filter-search label {
+    margin-left: 20px;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  .table-container {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    overflow-x: scroll;
+    /* WebKit scrollbar styles */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f2f2f2;
+  }
+  
+  /* Define the style for the scrollbar thumb and track */
+  .table-container::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .table-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+  }
+  
+  .table-container::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+  }
+
+  .table th,
+  .table td {
+    padding: 3px;
+    /* Further adjust padding for smaller screens */
+  }
+
+  .filter-search label {
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  .custom-input {
+    margin-left: 109px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    margin-top: 10px;
+  }
+
+  .filter {
+    padding: 8px;
+    margin-left: 32px;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    left: 0;
+  }
+
+  .label-date {
+    margin-right: -10px;
+    font-weight: bold;
+    margin-left: 21px;
+    margin-top:21px;
+  }
+
+  .search-icon {
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 20px;
+  }
+
+  .date {
+    padding: 8px;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    margin-left: 2px;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .full {
+    width: 100%;
+  }
+
+  .table th,
+  .table td {
+    padding: 2px;
+    /* Further adjust padding for smaller screens */
+  }
+}
